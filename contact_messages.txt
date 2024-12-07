@@ -1,0 +1,30 @@
+Name: pls
+Email: pls@pls
+Phone: 212121
+Subject: 1111
+Message: plsplspls
+
+Name: Pinlac
+Email: pinlac@gmail.com
+Phone: 086798678
+Subject: test
+Message: hello this is test
+
+Name: Jersey Pinlac
+Email: pinlacjm.924.stud@gmail.com
+Phone: 09304548373
+Subject: Concern
+Message: I have a concern
+
+Name:  Jersey Pinlac
+Email: jerseypinlacjersey@gmail.com
+Phone: 0926 011 8891
+Subject: Testing
+Message: Hi this is a test
+
+Name: TRY TRY
+Email: TRY@GMAIL
+Phone: 0987
+Subject: TRY
+Message: THIS IS ME TRYING
+

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Material Symbols Outlined' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+    <form action="php/handle_contact.php" method="POST"></form>
+    <title>Contact Me</title>
+    <style>
+       html, body {
+            height: 100%;
+            margin: 0;
+            background: linear-gradient(135deg, #0a0a2a, #2c3e50, #4a148c); /* Galaxy-like background */
+            background-size: 400% 400%;
+            color: white;
+            font-family: Arial, sans-serif;
+            animation: gradientBackground 20s ease infinite; /* Smooth animation for galaxy effect */
+        }
+
+        /* Smooth background animation */
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: transparent; /* Make navbar transparent */
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: blue !important; /* Change to blue */
+        }
+
+        .navbar-brand:hover,
+        .nav-link:hover {
+            color: cyan !important; /* Lighter blue on hover */
+        }
+        .nav-item.active .nav-link {
+    text-decoration: underline;
+    color: cyan !important; /* Highlight the active link */
+    font-weight: bold;
+}
+
+
+        /* Form Container */
+        .form-container {
+            margin-top: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #1e1e2f;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-control {
+            background-color: black;
+            color: white;
+            border: 1px solid cyan;
+        }
+
+        .form-control:focus {
+            background-color: black;
+            color: white;
+            border: 1px solid lightblue;
+            box-shadow: none;
+        }
+
+        .btn-custom {
+            background-color: cyan;
+            color: black;
+            font-weight: bold;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .btn-custom:hover {
+            background-color: lightblue;
+            color: black;
+        }
+        nav .navbar-brand {
+            font-family: 'Material Symbols Outlined', sans-serif;
+            font-size: 1.5rem;
+        }
+        .nav-link {
+            font-family: 'Aldrich', sans-serif;
+        }
+        h2 {
+         font-family: 'Material Symbols Outlined', sans-serif;
+        }
+        label {
+         font-family: 'Material Symbols Outlined', sans-serif;
+        }
+        input {
+         font-family: 'Aldrich', sans-serif;
+        }
+        button {
+         font-family: 'Aldrich', sans-serif;
+        }
+        .navbar-toggler {
+    border-color: transparent;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg" style="background-color: transparent;">
+        <a class="navbar-brand text-light" href="index.html">JP3</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                    <a class="nav-link text-light" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="aboutme.html">About me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="projects.html">Projects & Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="college.html">College Life</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-light" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</nav>
+
+    <!-- Contact Form -->
+    <div class="container form-container">
+        <h2 class="text-center mb-4">Contact Me</h2>
+        <form action="php/handle_contact.php" method="POST">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter the subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Write your message here" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-custom btn-block">Send Message</button>
+        </form>
+    </div>        
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

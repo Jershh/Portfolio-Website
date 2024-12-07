@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Material Symbols Outlined' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet'>
+  <title>About Me</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0a0a2a, #2c3e50, #4a148c); /* Darker, smoother galaxy colors */
+      color: white;
+      background-size: 400% 400%;
+      animation: gradientBackground 20s ease infinite; /* Smooth animation for galaxy effect */
+    }
+
+    /* Smooth background animation */
+    @keyframes gradientBackground {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .timeline-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+
+    .timeline {
+      width: 48%;
+      padding: 20px;
+      border-left: 2px solid cyan;
+      position: relative;
+    }
+
+    .timeline-event {
+      position: relative;
+      padding-left: 40px;
+      margin-bottom: 30px;
+    }
+
+    .timeline-event:before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: -9px;
+      width: 15px;
+      height: 15px;
+      background-color: cyan;
+      border-radius: 50%;
+    }
+
+    .timeline-event h4 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+      transition: text-shadow 0.3s ease; /* Glow effect on hover */
+    }
+
+    .timeline-event h4:hover {
+      text-shadow: 0 0 15px cyan, 0 0 30px cyan, 0 0 45px cyan; /* Glowing effect */
+    }
+
+    .timeline-event p {
+      font-size: 0.9rem;
+    }
+
+    .info-container {
+      width: 48%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      opacity: 0;
+      animation: fadeIn 2s 0.5s forwards;
+    }
+
+    .info-box {
+      background-color:#1e1e2f;
+      color: cyan;
+      border-radius: 10px;
+      padding: 15px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .info-box:hover {
+      transform: scale(1.1); /* Zoom effect on hover */
+    }
+
+    .info-box h5 {
+      font-weight: bold;
+    }
+
+    .btn-container {
+      margin: 10px;
+      text-align: left;
+    }
+
+    .btn-projects {
+      display: inline-block;
+      background-color: #1e1e2f;
+      color: cyan;
+      border: none;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: background-color 0,3s;
+    }
+
+    .btn-projects:hover {
+      background-color: cyan;
+    }
+    @media (max-width: 768px) {
+  .btn-container {
+    text-align: center; /* Center-align button on smaller screens */
+  }
+
+  .btn-projects {
+    font-size: 14px; /* Reduce font size for better fit */
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+  }
+}
+    .navbar-brand:hover,
+    .nav-link:hover {
+      color: cyan !important;
+    }
+    .nav-item.active .nav-link {
+    text-decoration: underline;
+    color: cyan !important; /* Highlight the active link */
+    font-weight: bold;
+}
+
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    nav .navbar-brand {
+            font-family: 'Material Symbols Outlined', sans-serif;
+            font-size: 1.5rem;
+        }
+        .nav-link {
+            font-family: 'Aldrich', sans-serif;
+        }
+        p {
+            font-family: 'Aldrich', sans-serif;
+        }
+        h4 {
+         font-family: 'Aldrich', sans-serif;
+        }
+        h2 {
+         font-family: 'Material Symbols Outlined', sans-serif;
+        }
+        .navbar-toggler {
+    border-color: transparent;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+       
+  </style>
+</head>
+
+<body>
+        <nav class="navbar navbar-expand-lg" style="background-color: transparent;">
+            <a class="navbar-brand text-light" href="index.html">JP3</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                        <a class="nav-link text-light" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link text-light" href="aboutme.html">About me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="projects.html">Projects & Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="college.html">College Life</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="timeline-container">
+      <div class="timeline">
+        <h2 class="timeline-header">Education</h2>
+        <div class="timeline-event">
+          <h4>Elementary School</h4>
+          <p>Graduated in 2016 at Poblacion Central School, building a strong foundation in academics and extracurricular activities.</p>
+        </div>
+        <div class="timeline-event">
+          <h4>High School</h4>
+          <p>Graduated in 2021 at Pangasinan School of Arts and Trades, enjoying my high school life while achieving academic awards.</p>
+        </div>
+        <div class="timeline-event">
+          <h4>Senior High School</h4>
+          <p>Graduated in 2023 at Lyceum Northwestern University, achieving great academic success and exploring my passion for IT.</p>
+        </div>
+        <div class="timeline-event">
+          <h4>College</h4>
+          <p>Currently pursuing a Bachelor of Science in Information Technology at Universidad De Dagupan.</p>
+        </div>
+
+        <div class="btn-container text-left">
+          <a href="projects.html" class="btn-projects">View My Projects & Skills</a>
+        </div>
+      </div>
+
+      <div class="info-container">
+        <div class="info-box">
+          <h5>Hobbies & Interests</h5>
+          <p>When I'm not immersed in my studies, you can find me thrifting for unique finds, playing video games to escape reality, or simply cycling through the city.</p>
+        </div>
+        <div class="info-box">
+          <h5>Personal Motto</h5>
+          <p>"Strive for progress, not perfection. Small steps lead to great achievements."</p>
+        </div>
+        <div class="info-box">
+          <h5>My Bucket List</h5>
+          <p>I aspire to graduate with a Bachelor’s degree in Information Technology (BSIT). Once I’ve achieved financial stability, I aim to secure a fulfilling and stable career. With a secure job, I can support my family. To fulfill my childhood dream, I want to learn how to fly or drive a plane, as I’ve always wanted to be a pilot. Ultimately, I hope to travel the world and live a peaceful, happy life.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  <script>
+       
+        // Dynamically add the 'active' class to the current page in the navbar
+        var currentPath = window.location.pathname;
+var navLinks = document.querySelectorAll('.navbar-nav .nav-item');
+
+// Loop through the navigation items and add the 'active' class to the current page
+navLinks.forEach(function(link) {
+    if (link.querySelector('a').getAttribute('href') === currentPath) {
+        link.classList.add('active');
+    }
+});
+
+    </script>
+</body>
+
+</html>
